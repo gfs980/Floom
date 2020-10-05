@@ -1,0 +1,13 @@
+{
+  "name": "challenge-frontend",
+  "version": "1.0.0",
+  "description": "Floom Frontend Challenge",
+  "main": "index.js",
+  "scripts": {
+    "api": "json-server --port 8888 api.json"
+  },
+  "devDependencies": {
+    "json-server": "0.10.1"
+  },
+  "author": "Theo Stanton"
+}
