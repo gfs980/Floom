@@ -1,6 +1,5 @@
 import React from 'react'
-import ProductComponent from './Product'
-
+import ProductDetails from './ProductDetails'
 
 interface MainProps{
     products: Product[]
@@ -30,7 +29,7 @@ const Main: React.FunctionComponent<MainProps> = React.memo(({products}) => {
 
     return (
         <main>
-            {products.map((product, i) => <ProductComponent key={i} product={product} /> )}
+            {products.map((product, i) => <ProductDetails key={i} product={product} /> )}
         </main>
     )
 })

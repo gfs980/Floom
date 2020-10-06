@@ -1,4 +1,5 @@
 import React from 'react'
+import ImageComponent from './ImageComponent'
 
 interface ProductProps{
     product: Product
@@ -24,13 +25,11 @@ interface Merchant{
     prods: Product[]
 }
 
-const Product: React.FunctionComponent<ProductProps> = ({product}) => {
-
-    const img = `${product.image_urls.values().next().value}.jpg`
+const ProductDetails: React.FunctionComponent<ProductProps> = ({product}) => {
 
     return (
         <div className="product" key={product.id}>
-            <img src={img} alt=""/>
+            <ImageComponent image_urls={product.image_urls} />
             <div className="grid grid--row-2-min">
 
                 <div className="grid grid--col-2">
@@ -54,4 +53,4 @@ const Product: React.FunctionComponent<ProductProps> = ({product}) => {
 }
 
 
-export default Product
+export default ProductDetails
